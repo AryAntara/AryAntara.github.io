@@ -7,7 +7,7 @@ const page = async(blogtitle) => {
     blog = blog.data
     //console.log(blog)
   }catch(e){
-    return res.status(404).send('page not found')
+    return 'page not found'
   }
   try{
     const html = parseToHtml(blog)
