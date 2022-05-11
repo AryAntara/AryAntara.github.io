@@ -49,7 +49,13 @@ const parseToHtml = (value) => {
       bodyContent = bodyContent + subTitleCreated(contentScoope[i].split('subTitle = ')[1])
     }
   }
+  let css = `https://raw.githubusercontent.com/aryarte/blogPage/main/${theme}.css`
   let HTML = `<div class='container'><div class='identity'>${body}</div><div class='content'>${bodyContent}</div></div>`
-
+  let head = document.getElementsByTagName('head')[0]
+  let link = document.createElement("link")
+  link.href = css
+  link.type = "text/css"
+  link.rel = "stylesheet"
+  head.appendChild(link)
   return HTML
 }
