@@ -1,0 +1,16 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8">
+      <link href="https://raw.githubusercontent.com/aryarte/blogPage/main/f${theme}.css" rel="stylesheet">
+      <title>Ary Blog</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script type="text/javascript" src="./main.js">
+        let toRender = page(window.location.pathname.replace("/",""))
+        document.getElementById(root).innerHtml = toRender
+    </script>
+  </body>
+  </html>
