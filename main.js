@@ -11,7 +11,7 @@ const page = async(blogtitle) => {
   }
   try{
     const html = parseToHtml(blog)
-    console.log('sending',req.params.blogtitle)
+    console.log('sending',blogtitle)
     return html
   }catch(e){
     console.log('reported err > ',e)
