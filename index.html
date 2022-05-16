@@ -12,7 +12,7 @@
         const main = async(){
          let toRender = await page(window.location.pathname.replace("/",""))
          console.log(toRender,window.location.pathname)
-         document.getElementById(root).innerHTML= toRender
+         document.getElementById("root").innerHTML= toRender
         }
         main() 
     </script>
